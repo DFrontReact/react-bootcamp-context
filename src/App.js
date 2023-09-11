@@ -1,11 +1,13 @@
 import React from 'react';
+import { UserInfo, TopBar } from './components';
+import UserProvider from './providers/UserProvider';
 import './style.css';
 
-export default function App() {
-  return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
-  );
-}
+const App = () => (
+  <UserProvider>
+    <TopBar />
+    <UserInfo />
+  </UserProvider>
+);
+
+export default App;
