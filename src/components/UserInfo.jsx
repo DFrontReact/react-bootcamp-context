@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useUser } from '../hooks/useUser';
 
 export const UserInfo = () => {
   const { user, login } = useUser();
 
   return (
-    <div>
+    <div className="user-container">
       {user && <h1>Hello {user.name.first}</h1>}
 
-      <button onClick={login}>Login/Logout</button>
+      <button className="login-button" onClick={login}>
+        Login/Logout
+      </button>
     </div>
   );
 };
