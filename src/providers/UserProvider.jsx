@@ -1,8 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { getUserService } from '../services/getuser.service';
 
-export const UserContext = React.createContext();
-
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
@@ -14,11 +12,8 @@ const UserProvider = ({ children }) => {
         .catch(() => console.error('Ha ocurrido un error'));
   };
 
-  return (
-    <UserContext.Provider value={{ user, login }}>
-      {children}
-    </UserContext.Provider>
-  );
+  //editar componente si necesario
+  return <>{children}</>;
 };
 
 export default UserProvider;

@@ -1,8 +1,8 @@
 import React from 'react';
-import { useUser } from '../hooks/useUser';
 
 export const UserInfo = () => {
-  const { user, login } = useUser();
+  const user = null; //modificar/eliminar esta variable si necesario
+  const login = () => {}; //modificar/eliminar esta variable si necesario
 
   return (
     <div className="user-container">

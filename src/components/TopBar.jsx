@@ -1,18 +1,16 @@
 import React from 'react';
-import { useUser } from '../hooks/useUser';
 
 export const TopBar = () => {
-  const { user } = useUser();
-  const { first, last } = user?.name ? user.name : {};
-  const { thumbnail } = user?.picture ? user?.picture : {};
+  const user = null; //modificar/eliminar esta variable si necesario
 
   return (
     <div className="topbar">
       <div className="avatar-container">
         {user ? (
           <>
-            <p>{`Hi, ${first} ${last}`}</p>
-            <img src={thumbnail} />
+            {
+              //insertar código aquí
+            }
           </>
         ) : (
           <p>No logged user</p>
