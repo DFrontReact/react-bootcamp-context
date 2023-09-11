@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { useUserContext } from '../providers/UserProvider';
+import { useUser } from '../hooks/useUser';
 
 export const UserInfo = () => {
-  const { user, login } = useUserContext();
+  const { user, login } = useUser();
 
   return (
     <div>
